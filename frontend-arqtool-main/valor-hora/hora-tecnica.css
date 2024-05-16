@@ -1,0 +1,221 @@
+
+.container {
+    display: flex;
+    flex-direction: column; /* Organiza os itens em uma coluna */
+    align-items: center; /* Centraliza os itens horizontalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    height: 100vh; /* Define a altura para 100% da altura da viewport */
+}
+
+.remove-button {
+    background-color: #1F4173;
+    /* Cor de fundo do botão de excluir */
+    color: #fff;
+    /* Cor do texto do botão de excluir */
+    border: none;
+    /* Remove a borda do botão */
+    padding: 5px 10px;
+    /* Espaçamento interno do botão */
+    cursor: pointer;
+    /* Altera o cursor para indicar que o botão é clicável */
+    border-radius: 4px;
+    /* Adiciona bordas arredondadas ao botão */
+    transition: background-color 0.3s ease;
+    /* Suaviza a transição da cor de fundo */
+}
+
+.remove-button:hover {
+    background-color: #fff;
+    /* Altera a cor de fundo quando o mouse está sobre o botão de excluir */
+    color: #1F4173;
+    /* Altera a cor do texto quando o mouse está sobre o botão de excluir */
+
+}
+
+#expense-table {
+    border-collapse: collapse; /* Combina as bordas das células adjacentes */
+    margin: 0 auto; /* Define as margens laterais automáticas */
+    width: 80%; /* Defina a largura desejada */
+}
+
+#expense-table th, #expense-table td {
+    border: 1px solid #000; /* Adiciona uma borda preta ao redor de cada célula */
+    padding: 10px; /* Adiciona um pouco de espaço ao redor do texto em cada célula */
+}
+
+/* Estilo para uma linha da tabela */
+.row-table {
+    background-color: #f2f2f2; /* Cor de fundo da linha */
+}
+
+/* Estilo para a linha da tabela quando o mouse está sobre ela */
+.row-table:hover {
+    background-color: #e0e0e0; /* Altera a cor de fundo quando o mouse está sobre a linha */
+}
+
+/* Estilo para os botões de ação dentro da linha */
+.row-table .btn-delete {
+    background-color: #1F4173; /* Cor de fundo do botão de excluir */
+    color: #fff; /* Cor do texto do botão de excluir */
+    border: none; /* Remove a borda do botão */
+    padding: 5px 10px; /* Espaçamento interno do botão */
+    cursor: pointer; /* Altera o cursor para indicar que o botão é clicável */
+    border-radius: 4px; /* Adiciona bordas arredondadas ao botão */
+    transition: background-color 0.3s ease; /* Suaviza a transição da cor de fundo */
+}
+
+/* Estilo para os botões de ação dentro da linha quando o mouse está sobre eles */
+.row-table .btn-delete:hover {
+    background-color: #fff; /* Altera a cor de fundo quando o mouse está sobre o botão de excluir */
+    color: #1F4173; /* Altera a cor do texto quando o mouse está sobre o botão de excluir */
+}
+
+/* Estilo para os botões de ação dentro da linha quando estão ativos (clicados) */
+.row-table .btn-delete:active {
+    background-color: #1F4173; /* Altera a cor de fundo quando o botão de excluir está ativo */
+}
+
+/* Estilo do cabeçalho */
+.wizard-header {
+    text-align: center;
+    padding: 15px 0;
+}
+
+.wizard-title {
+    font-size: 24px;
+    font-weight: 500;
+    color: #1F4173;
+}
+
+/* Estilo da navegação */
+.wizard-navigation ul {
+    list-style-type: none;
+    background-color: #f5f5f5;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    border-bottom: 1px solid #1F4173;
+}
+
+.wizard-navigation ul li a {
+    color: #1F4173;
+    text-decoration: none;
+    padding: 10px 0;
+    display: block;
+    text-align: center;
+}
+
+.wizard-container {
+    padding-top: 100px;
+    z-index: 3; }
+    .wizard-container .wizard-navigation {
+      position: relative; }
+
+.wizard-navigation ul li.active a {
+    color: #fff;
+    background-color: #1F4173;
+    border-radius: 4px;
+}
+
+/* Estilo do conteúdo */
+.tab-content {
+    padding: 20px;
+    border: 1px solid #1F4173;
+    width: 80vh;
+}
+
+/* Estilo do rodapé */
+.wizard-footer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.wizard-footer .left-side {
+    align-self: flex-start;
+}
+
+.wizard-footer .right-side {
+    align-self: flex-end;
+}
+
+.input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Se desejar centralizar horizontalmente apenas, utilize apenas 'justify-content: center;' */
+    /* Se desejar centralizar verticalmente apenas, utilize apenas 'align-items: center;' */
+}
+
+.btn-next, .btn-calcular {
+    background-color: #1F4173;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px; /* Ajuste este valor conforme necessário */
+}
+ 
+
+.btn-calcular {
+    display: none;
+}
+
+
+.input-expense {
+    margin: 0 auto; /* Define as margens laterais automáticas */
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+.row {
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.middle-col {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.col-sm-12 {
+    margin: 0 auto; /* Define as margens laterais automáticas */
+    text-align: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+/* Estilo da lista de itens */
+#custos-mensais {
+    list-style-type: none;
+    padding: 0;
+}
+
+#custos-mensais li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+    border-bottom: 1px solid #ddd; /* Adiciona uma linha separadora entre os itens */
+}
+
+#custos-mensais li:last-child {
+    border-bottom: none; /* Remove a linha separadora do último item */
+}
+
+#custos-mensais li .close,
+#custos-mensais li .edit {
+    cursor: pointer;
+}
+
+#custos-mensais li .close:hover,
+#custos-mensais li .edit:hover {
+    color: red; /* Altera a cor dos ícones ao passar o mouse sobre eles */
+}
+
+.btn .material-icons {
+    vertical-align: middle;
+    font-size: 17px;
+    top: -1px;
+    position: relative; 
+}
