@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar a Senha</title>
+    <link rel="icon" href="../assets/logo.png" type="image/png">
+    <link rel="stylesheet" href="../login-registro/autenticacao.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="content first-content">
+
+            <div class="first-column">
+                <h2 class="title title-primary">ArqTool</h2>
+                <p class="description description-primary">Bem-vindo de volta!</p>
+                <p class="description description-primary">Recupere sua senha agora mesmo.</p>
+                <button onclick="retornarParaLogin()" class="btn btn-primary">Entrar</button>
+            </div>
+
+            <div class="second-column">
+                <h2 class="title title-second">Recuperar senha</h2>
+                <form class="form">
+                    <label class="label-input" for="">
+                        <i class="far fa-user icon-modify"></i>
+                        <input id="email" type="email" placeholder="Email">
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="far fa-user icon-modify"></i>
+                        <input id="dataNascimento" type="text" placeholder="Data de nascimento">
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="far fa-user icon-modify"></i>
+                        <input id="telefone" type="text" placeholder="Telefone">
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="far fa-user icon-modify"></i>
+                        <input id="senha" type="password" placeholder="Nova senha">
+                        <button class="btnTgR" type="button" onclick="toggleVisibility()" tabindex="-1">
+                            <img class="fechadoR" src="../assets/olho-fechado.png" alt="olho fechado">
+                        </button>
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="far fa-user icon-modify"></i>
+                        <input id="confirmacaoSenha" type="password" placeholder="Confirmaçãos de senha">
+                        <button class="btnTgR" type="button" onclick="toggleVisibility()" tabindex="-1">
+                            <img class="fechadoR" src="../assets/olho-fechado.png" alt="olho fechado">
+                        </button>
+                    </label>
+
+                    <button onclick="recuperarSenha()" class="btn btn-second">Recuperar</button>
+                </form>
+            </div> <!-- second column -->
+        </div> <!-- first content -->
+    </div>
+
+    </div>
+
+    <script src="recupere-sua-senha.js"></script>
+</body>
+
+</html>

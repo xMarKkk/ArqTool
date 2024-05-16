@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="./assets/logo.png" type="image/png">
+    <link rel="stylesheet" href="./login-registro/autenticacao.css">
+</head>
+
+<body class="sign-in-js">
+
+    <div class="container">
+        <div class="content first-content">
+            <div class="first-column">
+                <h2 class="title title-primary">ArqTool</h2>
+                <p class="description description-primary">Bem-vindo de volta!</p>
+                <p class="description description-primary">Acesse sua conta agora mesmo.</p>
+                <button onclick="irParaLogin()" id="signin" class="btn btn-primary">ENTRAR</button>
+            </div>
+
+            <div class="second-column">
+                <h2 class="title title-second">Cadastrar</h2>
+                <div class="form">
+                    <label class="label-input" for="">
+                        <i class="far fa-user icon-modify"></i>
+                        <input id="nomeCompletoR" type="text" placeholder="Nome e Sobrenome">
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input id="emailR" type="email" placeholder="Email">
+                    </label>
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input id="dataNascimentoR" oninput="formatarDataNascimento(this)" type="text" placeholder="Data de nascimento">
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input id="telefoneR" oninput="formatarTelefone(this)" type="tel" placeholder="Telefone">
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input id="senhaR" type="password" placeholder="Senha">
+                        <button class="btnTgR" type="button" onclick="toggleVisibilityR('senhaR', 'confirmacaoSenhaR')"
+                            tabindex="-1">
+                            <img class="fechadoR" src="./assets/olho-fechado.png" alt="olho fechado">
+                        </button>
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input id="confirmacaoSenhaR" type="password" placeholder="Confirmação da senha">
+                        <button class="btnTgR" type="button" onclick="toggleVisibilityR('senhaR', 'confirmacaoSenhaR')"
+                            tabindex="-1">
+                            <img class="fechadoR" src="./assets/olho-fechado.png" alt="olho fechado">
+                        </button>
+                    </label>
+
+                    <button onclick="registro()" class="btn btn-second">CADASTRAR</button>
+                </div>
+            </div><!-- second column -->
+        </div><!-- first content -->
+        <div class="content second-content">
+            <div class="first-column">
+                <h2 class="title title-primary">ArqTool</h2>
+                <p class="description description-primary">Olá amigo!</p>
+                <p class="description description-primary">Insira seus dados e comece a calcular seus projetos.</p>
+                <button onclick="irParaRegistro()" id="signup" class="btn btn-primary">CADASTRAR</button>
+            </div>
+            <div class="second-column">
+                <h2 class="title title-second">Entrar</h2>
+                <p class="description description-second">Faça seu login usando email e senha.</p>
+                <div class="form">
+
+                    <label class="label-input" for="">
+                        <i class="far fa-envelope icon-modify"></i>
+                        <input id="emailL" type="email" placeholder="Email">
+                    </label>
+
+                    <label class="label-input" for="">
+                        <i class="fas fa-lock icon-modify"></i>
+                        <input id="senhaL" type="password" placeholder="Senha">
+                        <button class="btnTgL" type="button" onclick="toggleVisibilityL()" tabindex="-1">
+                            <img class="fechadoL" src="./assets/olho-fechado.png" alt="olho fechado">
+                        </button>
+                    </label>
+
+                    <a class="password" onclick="irParaRecuperarSenha()">Esqueceu a senha?</a>
+                    <button onclick="login()" class="btn btn-second">ENTRAR</button>
+                </div>
+            </div><!-- second column -->
+        </div><!-- second-content -->
+
+        <script src="login-registro/login-registro.js"></script>
+</body>
+
+</html>
